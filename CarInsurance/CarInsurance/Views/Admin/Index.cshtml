@@ -1,0 +1,38 @@
+﻿@using CarInsurance.ViewModels
+@model List<CustomerQuotes>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Admin Quote View</h2>
+<br />
+<br />
+@foreach (var quote in Model)
+{
+
+    <div class="container">
+        <div class="row row-no-gutters">
+            <div class="col-md-2">
+                <h4><b>First Name</b></h4>
+                @quote.FirstName
+            </div>
+            <div class="col-md-2">
+                <h4><b>Last Name</b></h4>
+                @quote.LastName
+            </div>
+            <div class="col-md-2">
+                <h4><b>Email Address</b></h4>
+                @quote.EmailAddress
+            </div>
+            <div class="col-md-2">
+                <h4><b>Quoted Price</b></h4>
+                <p>$@quote.Quote.00</p>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+}

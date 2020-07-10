@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@using (Html.BeginForm("TheirInsuranceQuote", "Home", FormMethod.Post, new { id = "signupform" }))
+{
+    <h1><b>Get your quote now!</b></h1>
+    <div class="form-horizontal">
+        <form submit="/insranceQuotePost" method="post">
+          <div class="col-auto">
+            <br />
+
+            <div class="form-group col-md-12">
+              <input class="form-control" name="firstName" type="text" placeholder="First Name" /> @*User will input their first name*@
+            </div>
+
+            <div class="form-group col-md-12">
+              <input class="form-control" name="lastName" type="text" placeholder="Last Name" /> @*User inputs last name*@
+            </div>
+
+            <div class="form-group col-md-12">
+              <input class="form-control" name="emailAddress" type="email" placeholder="Email" /> @*User inputs Email*@
+            </div>
+
+            <div class="form-group col-md-12">
+              <input class="form-control" name="dateOfBirth" type="date" placeholder="Date of Birth" /> @*User inputs DOB*@
+            </div>
+
+            <div class="form-group col-md-12">
+              <input class="form-control" name="carYear" type="number" placeholder="Year" /> @*Inputs year of car*@
+            </div>
+
+            <div class="form-group col-md-12">
+              <input class="form-control" name="carMake" type="text" placeholder="Make" /> @*Inputs the make of the car*@
+            </div>
+
+            <div class="form-group col-md-12">
+              <input class="form-control" name="carModel" type="text" placeholder="Model" /> @*Inputs the model of the car*@
+            </div>
+
+            <div class="form-group col-md-12">
+              <label>Have you ever had a DUI?</label><br />
+              <input type="radio" name="dui" id="yes" value="true">
+              <label for="yes">Yes</label><br />
+              <input type="radio" name="dui" id="no" value="false">
+              <label for="no">No</label>
+            </div>
+
+            <div class="form-group col-md-12">
+              <input class="form-control" name="speedingTickets" type="number" placeholder="Number of Tickets" /> @*Selector arrows for how many tickets'*@
+            </div>
+
+            <div class="form-group col-md-12">
+              <label>Do you want full coverage or liability?</label><br />
+              <input type="radio" name="coverageType" id="yes" value="true">
+              <label for="yes">Full Coverage</label><br />
+              <input type="radio" name="coverageType" id="no" value="false">
+              <label for="no">Liability</label>
+            </div>
+
+            <button type="submit" class="btn btn-info">Get Quote</button> @*"Submits their info and redirects them to the quote page"*@
+          </div>
+        </form>
+    </div>
+    <br/>
+    <br/>
+  
+        }

@@ -1,0 +1,24 @@
+﻿
+<h2>Insurance Quote</h2>
+
+@model CarInsurance.Models.Table
+
+
+@{
+    ViewBag.Title = "insranceQuotePost";
+}
+<div class="row">
+    <div class="col-md-3">
+        <h5><b>FIRST NAME:</b> @Model.FirstName</h5>  @*Displays their first name that they entered*@
+    </div>
+    <div class="col-md-3">
+        <h5><b>LAST NAME:</b> @Model.LaststName</h5> @*Displays their last name from entry*@
+    </div>
+    <div class="col-md-3">
+        <p class="text-center"><b>Quote total:</b> $@Model.Quote</p> @*displays the final total*@
+    </div>
+</div>
+
+
+
+
